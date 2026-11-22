@@ -84,3 +84,4 @@ More tasks:
 - `./gradlew runShowcase`: visual check. Loads `run/saves/showcase` (for example a copy of `run/world` after a test run), builds every type in front of trees, takes screenshots and quits.
 - `python tools/gen_assets.py`: regenerates the block models, blockstates, textures and flame particles.
 - `python tools/gen_logo.py`: regenerates the logo (`docs/logo.png` and the mod list logo `src/main/resources/logo.png`).
+- `python tools/gen_icon.py`: regenerates the square icon (`docs/icon.png`, 512×512, and the resource pack icon `src/main/resources/pack.png`).
