@@ -1,0 +1,22 @@
+{
+  "itemGroup.create_flamethrowers": "Create: Flamethrowers",
+  "block.create_flamethrowers.jet_flamethrower": "Jet Flamethrower",
+  "block.create_flamethrowers.fan_flamethrower": "Fan Flamethrower",
+  "block.create_flamethrowers.tornado_flamethrower": "Fire Tornado Flamethrower",
+  "block.create_flamethrowers.napalm_flamethrower": "Napalm Launcher",
+  "entity.create_flamethrowers.napalm_blob": "Napalm Blob",
+  "create_flamethrowers.goggles.title": "%s",
+  "create_flamethrowers.goggles.lava": "Lava: %s / %s mB",
+  "create_flamethrowers.goggles.range": "Range %s blocks, heat x%s",
+  "create_flamethrowers.goggles.use": "Uses %s mB lava/s",
+  "create_flamethrowers.goggles.napalm_use": "%s mB per shot, %s shots/s",
+  "create_flamethrowers.status.firing": "Burning",
+  "create_flamethrowers.status.no_lava": "No lava",
+  "create_flamethrowers.status.too_slow": "Shaft too slow (needs medium speed)",
+  "create_flamethrowers.status.overstressed": "Overstressed",
+  "create_flamethrowers.status.redstone": "Switched off by redstone",
+  "create_flamethrowers.tooltip.jet": "Long, narrow jet. Pierces several blocks of wood.",
+  "create_flamethrowers.tooltip.fan": "Short, wide cone of fire against leaves and undergrowth.",
+  "create_flamethrowers.tooltip.tornado": "Spinning fire vortex: sucks mobs in and burns everything inside.",
+  "create_flamethrowers.tooltip.napalm": "Lobs sticky napalm blobs that keep burning."
+}

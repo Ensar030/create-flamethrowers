@@ -1,0 +1,42 @@
+modLoader = "javafml"
+loaderVersion = "[4,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+authors = "OhneLags"
+description = '''Lava-powered, rotation-driven flamethrowers for Create.
+Jet, fan, fire tornado and napalm launcher. They do not just light fires: they actively burn
+wood, leaves and plants in front of them, so a vehicle (Create Aeronautics, Let it Walk!) can
+torch a path straight through a forest. Works on Sable ships and walkers.'''
+
+[[dependencies."${mod_id}"]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "minecraft"
+type = "required"
+versionRange = "[${minecraft_version},1.22)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "create"
+type = "required"
+versionRange = "[6.0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "sable"
+type = "required"
+reason = "Flamethrowers on Create Aeronautics vehicles and Let it Walk! walkers live on Sable sub-levels."
+versionRange = "[2.0,3.0)"
+ordering = "AFTER"
+side = "BOTH"

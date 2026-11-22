@@ -1,0 +1,1 @@
+{ "selector": "create_flamethrowers:napalm_flamethrower", "priority": 1001, "properties": { "sable:mass": 1.5 } }

@@ -1,0 +1,22 @@
+{
+  "itemGroup.create_flamethrowers": "Create: Flammenwerfer",
+  "block.create_flamethrowers.jet_flamethrower": "Strahl-Flammenwerfer",
+  "block.create_flamethrowers.fan_flamethrower": "Fächer-Flammenwerfer",
+  "block.create_flamethrowers.tornado_flamethrower": "Feuerwirbel-Flammenwerfer",
+  "block.create_flamethrowers.napalm_flamethrower": "Napalm-Werfer",
+  "entity.create_flamethrowers.napalm_blob": "Napalm-Klumpen",
+  "create_flamethrowers.goggles.title": "%s",
+  "create_flamethrowers.goggles.lava": "Lava: %s / %s mB",
+  "create_flamethrowers.goggles.range": "Reichweite %s Blöcke, Hitze x%s",
+  "create_flamethrowers.goggles.use": "Verbrauch: %s mB Lava/s",
+  "create_flamethrowers.goggles.napalm_use": "%s mB pro Schuss, %s Schuss/s",
+  "create_flamethrowers.status.firing": "Brennt",
+  "create_flamethrowers.status.no_lava": "Keine Lava",
+  "create_flamethrowers.status.too_slow": "Welle zu langsam (mind. mittlere Drehzahl)",
+  "create_flamethrowers.status.overstressed": "Überlastet",
+  "create_flamethrowers.status.redstone": "Per Redstone abgeschaltet",
+  "create_flamethrowers.tooltip.jet": "Langer, schmaler Strahl. Durchdringt mehrere Holzblöcke.",
+  "create_flamethrowers.tooltip.fan": "Breiter, kurzer Flammenfächer gegen Laub und Unterholz.",
+  "create_flamethrowers.tooltip.tornado": "Rotierender Feuerwirbel: saugt Mobs ein und verbrennt alles darin.",
+  "create_flamethrowers.tooltip.napalm": "Verschießt klebende Napalm-Klumpen, die weiterbrennen."
+}

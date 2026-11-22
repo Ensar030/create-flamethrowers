@@ -1,0 +1,86 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.148'
+}
+
+version = mod_version
+group = 'dev.ohnelags.flamethrowers'
+
+base {
+    archivesName = 'create_flamethrowers'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+// Game tests live in their own source set: they run in the dev server but never ship in the jar.
+sourceSets {
+    gametest {
+        compileClasspath += sourceSets.main.output
+        runtimeClasspath += sourceSets.main.output
+    }
+}
+
+neoForge {
+    version = project.neo_version
+    addModdingDependenciesTo(sourceSets.gametest)
+
+    runs {
+        client {
+            client()
+        }
+        server {
+            server()
+            programArgument '--nogui'
+        }
+        // dev-only visual check: loads run/saves/showcase, builds a scene, saves screenshots, quits
+        showcase {
+            client()
+            sourceSet = sourceSets.gametest
+            systemProperty 'flamethrowers.showcase', 'true'
+            programArguments.addAll '--quickPlaySingleplayer', 'showcase'
+        }
+        gameTestServer {
+            type = "gameTestServer"
+            sourceSet = sourceSets.gametest
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'create_flamethrowers'
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+            sourceSet(sourceSets.gametest)
+        }
+    }
+}
+
+dependencies {
+    // Compiled against the exact jars of the modpack (Create + its libraries, Sable).
+    // At runtime the modpack provides them (for dev runs: run/mods).
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+    gametestCompileOnly fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+var generateModMetadata = tasks.register('generateModMetadata', ProcessResources) {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            neo_version            : neo_version,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_version            : mod_version,
+    ]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from 'src/main/templates'
+    into 'build/generated/sources/modMetadata'
+}
+sourceSets.main.resources.srcDir generateModMetadata
+neoForge.ideSyncTask generateModMetadata
+
+tasks.matching { it.name == 'runGameTestServer' }.configureEach {
+    doFirst { if (!project.hasProperty('keepWorld')) delete 'run/world' }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

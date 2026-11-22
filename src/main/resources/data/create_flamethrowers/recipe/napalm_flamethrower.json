@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": ["SBS", "FJF"],
+  "key": {
+    "S": { "item": "minecraft:slime_ball" },
+    "B": { "item": "create:brass_casing" },
+    "F": { "item": "minecraft:fire_charge" },
+    "J": { "item": "create_flamethrowers:jet_flamethrower" }
+  },
+  "result": { "id": "create_flamethrowers:napalm_flamethrower", "count": 1 }
+}

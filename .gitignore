@@ -1,0 +1,15 @@
+# Gradle / IDE
+.gradle/
+build/
+out/
+.idea/
+*.iml
+.vscode/
+__pycache__/
+
+# dev runs (worlds, logs, crash reports, screenshots, downloaded mods)
+run/
+*.log
+
+# third-party mod jars are not redistributed, see libs/README.md
+libs/*.jar

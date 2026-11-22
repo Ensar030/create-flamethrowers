@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [" R ", "IJI", " M "],
+  "key": {
+    "R": { "item": "create:propeller" },
+    "I": { "item": "create:copper_sheet" },
+    "J": { "item": "create_flamethrowers:jet_flamethrower" },
+    "M": { "item": "create:precision_mechanism" }
+  },
+  "result": { "id": "create_flamethrowers:tornado_flamethrower", "count": 1 }
+}
