@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/logo.png" alt="Create: Flamethrowers" width="600"></p>
+
 # Create: Flamethrowers
 
 **Lava-powered flamethrowers for [Create](https://modrinth.com/mod/create) on NeoForge 1.21.1**
@@ -81,3 +83,4 @@ More tasks:
   Create and Sable must be in `run/mods/` for this.
 - `./gradlew runShowcase`: visual check. Loads `run/saves/showcase` (for example a copy of `run/world` after a test run), builds every type in front of trees, takes screenshots and quits.
 - `python tools/gen_assets.py`: regenerates the block models, blockstates, textures and flame particles.
+- `python tools/gen_logo.py`: regenerates the logo (`docs/logo.png` and the mod list logo `src/main/resources/logo.png`).

@@ -6,6 +6,8 @@ license = "All Rights Reserved"
 modId = "${mod_id}"
 version = "${mod_version}"
 displayName = "${mod_name}"
+logoFile = "logo.png"
+logoBlur = false
 authors = "OhneLags"
 description = '''Lava-powered, rotation-driven flamethrowers for Create.
 Jet, fan, fire tornado and napalm launcher. They do not just light fires: they actively burn
